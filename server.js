@@ -47,6 +47,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    message: 'My projects'
+  });
+});
+
 app.get('/bad', (req, response) => {
   response.send({
     errorCode: 100,
